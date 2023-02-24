@@ -27,7 +27,7 @@ st.image(image, use_column_width=True)
     
 
 def info_callback(d1, d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12):    
-            with open('data.csv', 'w+') as file:    #Append & read mode
+            with open('data.csv', 'w+') as file:    
                 myfile=csv.writer(file)
                 myfile.writerow(["age","anaemia","creatinine_phosphokinase","diabetes","ejection_fraction",
                      "high_blood_pressure","platelets","serum_creatinine","serum_sodium",
@@ -80,7 +80,7 @@ sample=pd.read_csv("data.csv")
 ## make the prediction
 if st.button('Predict'):
     prediction=model.predict(sample)
-    #prediction=model_LR.predict(paddes_email)
+    
 
 ## print the result
     #set the threshold of 0.5:
